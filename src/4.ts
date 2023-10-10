@@ -39,7 +39,7 @@ abstract class House {
 class MyHouse extends House {
   
   openDoor(keyToEnterTheHouse: Key): void {
-    if (this.key === keyToEnterTheHouse) {
+    if (this.key.getSignature() === keyToEnterTheHouse.getSignature()) {
       this.door = true;
     }
   }
